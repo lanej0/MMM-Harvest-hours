@@ -1,3 +1,5 @@
+const exec = require("child_process").exec;
+var fs = require('fs');
 var NodeHelper = require("node_helper");
 
 module.exports = NodeHelper.create({
@@ -11,7 +13,7 @@ module.exports = NodeHelper.create({
     console.log("Downloading hours");
 
     if(notification === "BRING_HOURS"){
-      var hours = "9.0";
+      var hours = fs.readFileSync('DATA.txt', 'utf8');
       self.sendSocketNotification("HOURS", hours);
     }
   },

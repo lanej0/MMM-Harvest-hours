@@ -11,7 +11,9 @@ todayHrs = HTTParty.get(todayURL, {
 x=0
 todayHrs["results"].each do
   if todayHrs["results"][x]["user_id"].to_s == @userID
-    puts todayHrs["results"][x]["total_hours"].to_s
+    file = File.open('DATA.txt', 'w')
+    file.puts todayHrs["results"][x]["total_hours"].to_s
+    file.close
   end
   x=x+1
 end
