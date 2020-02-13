@@ -1,6 +1,6 @@
 Module.register("MMM-Harvest-hours", {
   defaults: {
-    updateInterval: 600 * 1000, // every 5 minutes
+    updateInterval: 60 * 1000, // every 1 minutes
     initialLoadDelay: 1,
     retryDelay: 2500,
     height: 150,

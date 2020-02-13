@@ -13,7 +13,7 @@ module.exports = NodeHelper.create({
     console.log("Downloading hours");
 
     if(notification === "BRING_HOURS"){
-      var hours = fs.readFileSync('DATA.txt', 'utf8');
+      var hours = fs.readFileSync('modules/MMM-Harvest-hours/DATA.txt', 'utf8');
       self.sendSocketNotification("HOURS", hours);
     }
   },
