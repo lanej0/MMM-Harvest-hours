@@ -13,6 +13,7 @@ module.exports = NodeHelper.create({
     console.log("Downloading hours");
 
     if(notification === "BRING_HOURS"){
+      exec("bundle exec ruby modules/MMM-Harvest-hours/today.rb", null);
       var hours = fs.readFileSync('modules/MMM-Harvest-hours/DATA.txt', 'utf8');
       self.sendSocketNotification("HOURS", hours);
     }
