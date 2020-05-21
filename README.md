@@ -1,2 +1,3 @@
 # MMM-Harvest-hours
-Keeps track of the hours worked today/this week
+
+A [MagicMirror](https://magicmirror.builders/) module for keeping track of the hours worked today
